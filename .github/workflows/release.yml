@@ -5,6 +5,7 @@ on:
       - v*
 jobs:
   release:
+    permissions: write-all
     name: Release WebGoat
     runs-on: ubuntu-latest
     environment:
