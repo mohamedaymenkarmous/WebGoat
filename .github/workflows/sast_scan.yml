@@ -48,7 +48,7 @@ jobs:
     - name: Contrast Scan Action
       uses: Contrast-Security-OSS/contrastscan-action@v2.0.3
       with:
-        artifact: target/webgoat-${{ env.WEBGOAT_MAVEN_VERSION }}.jar
+        artifact: /home/runner/work/WebGoat/WebGoat/target/webgoat-${{ env.WEBGOAT_MAVEN_VERSION }}.jar
         apiKey: ${{ secrets.CONTRAST_API_KEY }}
         orgId: ${{ secrets.CONTRAST_ORGANIZATION_ID }}
         authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
