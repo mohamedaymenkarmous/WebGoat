@@ -20,5 +20,5 @@ jobs:
       run: |
         # Use the `github_token` to get repository information
         # For example, get the list of pull requests:
-        curl -X POST -vvv -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -H 'content-type: application/json' https://api.github.com/repos/mohamedaymenkarmous/WebGoat/sast_scan.yml/dispatches -d '{"event_type":"test,"client_payload":{"unit":false,"integration":true}}'
+        curl -X POST -vvv -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -H 'content-type: application/json' https://api.github.com/repos/mohamedaymenkarmous/test/dispatches -d '{"event_type":"test,"client_payload":{"unit":false,"integration":true}}'
 
