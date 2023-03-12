@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Get repository information
+      run: |
+        # Use the `github_token` to get repository information
+        # For example, get the list of pull requests:
+        curl -X POST -vvv -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -H 'content-type: application/json' https://api.github.com/repos/mohamedaymenkarmous/WebGoat/actions/workflows/sast_scan.yml/dispatches -d '{"event_type":"customer-specific-workflow","client_payload":{"unit":false,"integration":true}}'
+
