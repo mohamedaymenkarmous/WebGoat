@@ -6,6 +6,10 @@ on:
       - main
   pull_request:
       types: [opened, synchronize, reopened]
+  workflow_dispatch:
+  workflow_call:
+  repository_dispatch:
+    types: [test]
 name: Contrast Security Scan
 jobs:
   build_and_scan:
