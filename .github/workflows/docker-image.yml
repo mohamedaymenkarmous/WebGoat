@@ -8,7 +8,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
