@@ -1,9 +1,9 @@
 on:
   # Trigger analysis when pushing to main or an existing pull requests.  Also trigger on
   # new pull requests
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
   pull_request:
       types: [opened, synchronize, reopened]
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     # check out project
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     # steps to build the artifact you want to scan
     # -name: Build Project
 
